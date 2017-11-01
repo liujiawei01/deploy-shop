@@ -9,7 +9,7 @@ const projects = ['vnshop.shudong.wang', 'vnshop', 'deploy', 'deploy-vnshop']
 
 const projectHandler = (event, action) => {
     const project = event.payload.repository.name
-    console.log(project);
+    console.log(project);   
     const branch = event.payload.ref
     if (projects.includes(project)) {
         console.log(new Date(), `Received a ${action} event for ${project} to ${branch}`)
